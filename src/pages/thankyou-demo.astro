@@ -1,0 +1,113 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+const extraHead = `<script>
+function uet_report_conversion() {
+     window.uetq = window.uetq || [];
+     window.uetq.push('event', 'Schedule a call - Mi - lead', {});
+}
+ uet_report_conversion();
+</script>
+<script>
+    window.onload = function() {
+        // Функція для отримання параметрів з рядка запиту URL
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const pairs = queryString.split("&");
+            for (let i = 0; i < pairs.length; i++) {
+                const pair = pairs[i].split("=");
+                params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+            }
+            return params;
+        }
+        // Функція для форматування дати
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const options = {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true,
+            };
+            return date.toLocaleString('en-US', options);
+        }
+        // Функція для отримання короткого формату часу
+        function getShortTime(dateString) {
+            const date = new Date(dateString);
+            const options = {
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true
+            };
+            return date.toLocaleString('en-US', options).replace(' ', '');
+        }
+        // Отримуємо параметри
+        const queryParams = getQueryParams();
+        if (!queryParams.event_start_time || !queryParams.event_type_name) { return; }
+        // Форматуємо дати
+        const formattedStartTime = formatDate(queryParams.event_start_time);
+        const formattedEndTime = getShortTime(queryParams.event_end_time);
+        // Отримуємо часовий пояс
+        const timeZoneOffset = new Date(queryParams.event_start_time).getTimezoneOffset() / -60;
+        const timeZoneString = \`GMT\${timeZoneOffset >= 0 ? '+' : ''}\${timeZoneOffset}\`;
+        // Створюємо розмітку для вставки з класами
+        const markup = \`
+            <p class="event-name"> \${queryParams.event_type_name}</p>
+            <p class="event-info-item"> \${formattedStartTime.split(',').slice(0, 2).join(',')} \${formattedStartTime.split(',').pop()} - \${formattedEndTime} (\${timeZoneString})</p>
+            <p class="event-info-item">With <span class="event-asigned" >\${queryParams.assigned_to}</span> </p>
+        \`;
+        // Вставляємо розмітку в елемент, якщо він існує
+        const eventInfoDiv = document.getElementById("event-info");
+        if (eventInfoDiv) {
+            eventInfoDiv.insertAdjacentHTML("beforeend", markup);
+        }
+    };
+</script>`;
+---
+<Base
+  title="You Are Scheduled | Indiev"
+  description={'thankyou-demo'}
+  noindex={true}
+  canonical="https://www.indiev.org/thankyou-demo"
+>
+  <Navbar />
+<main class="main">
+<div class="main_container">
+<div class="succes_container demo_container" id="event-info">
+<div class="check-wrap">
+<div class="icon-4 w-embed"><svg fill="none" height="420" viewbox="0 0 24 24" width="420" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.0002 15.172L19.1922 5.979L20.6072 7.393L10.0002 18L3.63623 11.636L5.05023 10.222L10.0002 15.172Z" fill="currentColor"></path>
+</svg>
+</div>
+</div>
+<h1 class="success_title">You are scheduled !</h1>
+<p class="succes_text demo-text">A calendar invitation has been sent to your email adress</p>
+</div>
+</div>
+</main><div class="w-embed w-script">
+
+<style>
+.event-name{
+ margin-bottom: 10px;
+ color:black;
+ font-weight:800;
+ font-size:16px;
+}
+    .event-info-item {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color:black;
+    }
+    .event-asigned{
+    font-weight:800;
+    }
+</style>
+</div>
+  <Footer />
+  <Fragment set:html={extraHead} />
+</Base>

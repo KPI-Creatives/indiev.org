@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+const extraHead = `<script>window.addEventListener('load',function(){if(window.Cal){Cal("inline",{elementOrSelector:"#cal-inline",calLink:"dima/qualification-15",layout:"month_view"});}});</script>`;
+---
+<Base
+  title="Schedule a Call — Indiev Video Editors"
+  description={'Choose a free date and book your meeting'}
+  noindex={true}
+  canonical="https://www.indiev.org/calendly"
+>
+  <Navbar />
+<div class="w-embed w-iframe"><!--  Google Tag Manager (noscript)  -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WKP4V9XP" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!--  End Google Tag Manager (noscript)  -->
+</div><main class="main">
+<div class="main_container">
+<div id="cal-inline" style="width:100%;min-height:760px;overflow:auto"></div>
+<h1 class="heading-4">Shcedule a call</h1>
+</div>
+</main>
+  <Footer />
+  <Fragment set:html={extraHead} />
+</Base>

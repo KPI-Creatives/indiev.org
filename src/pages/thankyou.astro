@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+const extraHead = ``;
+---
+<Base
+  title="Thank You | Indiev"
+  description={'thank you page for form submitting'}
+  noindex={true}
+  canonical="https://www.indiev.org/thankyou"
+>
+  <Navbar />
+<main class="main">
+<div class="main_container">
+<div class="succes_container">
+<div class="check-wrap">
+<div class="icon-4 w-embed"><svg fill="none" height="420" viewbox="0 0 24 24" width="420" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.0002 15.172L19.1922 5.979L20.6072 7.393L10.0002 18L3.63623 11.636L5.05023 10.222L10.0002 15.172Z" fill="currentColor"></path>
+</svg>
+</div>
+</div>
+<h1 class="success_title">Thank You !</h1>
+<p class="succes_text">We’ll get in touch with you as soon as possible.</p>
+</div>
+</div>
+</main>
+  <Footer />
+  <Fragment set:html={extraHead} />
+</Base>

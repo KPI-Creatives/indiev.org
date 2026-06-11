@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+const extraHead = ``;
+---
+<Base
+  title="Client Reviews | Indiev Video Editors"
+  description="What clients say about Indiev video editing services."
+  noindex={true}
+  canonical="https://www.indiev.org/detail_reviews"
+>
+  <Navbar />
+
+  <Footer />
+  <Fragment set:html={extraHead} />
+</Base>

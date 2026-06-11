@@ -1,0 +1,64 @@
+/* ============================================
+   State styles replacing Webflow IX2 / webflow.js
+   ============================================ */
+
+/* --- body lock when modal is open --- */
+body.no-scroll { overflow: hidden; }
+
+/* --- disabled form submit --- */
+.disable { pointer-events: none; opacity: .5; }
+
+/* --- mobile nav --- */
+.navbar { position: relative; }
+@media (max-width: 991px) {
+  .navbar.nav-open .nav-menue {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg);
+    z-index: 1000;
+    padding: 16px 24px 24px;
+    box-shadow: 0 8px 24px #0000001a;
+  }
+}
+
+/* --- "Empowering" vertical list: rotating highlight --- */
+.vertical_item { transition: background-color .3s ease; border-radius: var(--radius-md); }
+.vertical_item .vertical_text { display: none; }
+.vertical_item.hovered .vertical_text { display: block; }
+.vertical_item.hovered { background-color: var(--color-pink-soft); }
+.vertical_item.hovered .vertical_item_title { color: var(--color-ink); }
+
+/* --- accordions (You Will Get + FAQ) --- */
+.text_wrapper_accordion,
+.question_content_wrapper {
+  max-height: 0;
+  transition: max-height .35s ease;
+}
+.accordion_item.open .text_wrapper_accordion { max-height: 500px; }
+.question_item.open .question_content_wrapper { max-height: 500px; }
+.icon_accordion_container, .question_icon_container { transition: transform .3s ease; }
+.accordion_item.open .icon_accordion_container,
+.question_item.open .question_icon_container { transform: rotate(180deg); }
+.accordion_title_wrapper, .question_title_wrapper { cursor: pointer; }
+
+/* --- pricing toggle --- */
+.toggle-botton { left: 0; transition: transform .3s ease; }
+.button-switch.year .toggle-botton { transform: translateX(100%); }
+.button-switch.year .button-month { color: var(--color-gray-text); }
+.button-switch.year .button-year { color: var(--color-pink-accent); }
+.clone-year { display: none; }
+
+/* --- SEO "read more" block --- */
+.seo-hide-text { display: none; }
+.seo_text_container.expanded .seo-hide-text { display: block; }
+
+/* --- hero: explicit headline, slogan demoted to eyebrow --- */
+.hero_main_text.hero_h1 { font-size: 64px; line-height: 1.16; }
+
+@media (max-width: 991px) { .hero_main_text.hero_h1 { font-size: 48px; } }
+@media (max-width: 767px) { .hero_main_text.hero_h1 { font-size: 40px; } }
+@media (max-width: 479px) { .hero_main_text.hero_h1 { font-size: 32px; } }

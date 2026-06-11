@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import PortfolioHero from '../components/PortfolioHero.astro';
+import PortfolioExamples from '../components/PortfolioExamples.astro';
+import PortfolioFeedbacks from '../components/PortfolioFeedbacks.astro';
+import PortfolioElevate from '../components/PortfolioElevate.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base
+  title="Video Editing Portfolio: Examples & Client Reviews | Indiev"
+  description="Explore our video editing portfolio — real examples of YouTube, real estate, wedding and corporate video edits, plus verified client reviews on Trustpilot."
+  canonical="https://www.indiev.org/portfolio"
+>
+  <Navbar />
+  <div class="main">
+    <PortfolioHero />
+    <PortfolioExamples />
+    <PortfolioFeedbacks />
+    <PortfolioElevate />
+  </div>
+  <Footer />
+
+  <!-- Trustpilot widget -->
+  <script is:inline async src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"></script>
+</Base>

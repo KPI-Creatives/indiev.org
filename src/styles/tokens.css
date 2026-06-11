@@ -1,0 +1,61 @@
+/* ============================================
+   Indiev Design Tokens
+   Derived from the original Webflow site
+   ============================================ */
+:root {
+  /* --- Brand colors --- */
+  --color-primary: #7b5be9;        /* purple — links, accents, Calendly */
+  --color-magenta: #cd10ff;        /* gradient start */
+  --color-violet: #9f06ff;         /* gradient end */
+  --color-pink-accent: #f496d1;    /* pricing toggle active text */
+  --color-pink-light: #f5cfff;     /* light pink surfaces */
+  --color-pink-soft: #f9eff8;      /* soft pink section background */
+
+  /* --- Neutrals --- */
+  --color-ink: #000;
+  --color-white: #fff;
+  --color-text: #333;              /* body text */
+  --color-gray-text: #848199;      /* muted text */
+  --color-bg: #fcfbf8;             /* page background */
+
+  /* --- Gradients --- */
+  --gradient-brand: linear-gradient(44deg, var(--color-magenta) 15%, var(--color-violet) 85%);
+  --gradient-brand-90: linear-gradient(90deg, var(--color-magenta), var(--color-violet));
+
+  /* --- Typography --- */
+  --font-display: Avenir, sans-serif;          /* headings, UI */
+  --font-body: Mulish, sans-serif;             /* body copy */
+  --font-display-alt: Avenirnextltpro, sans-serif;
+
+  /* type scale (from Webflow usage frequency) */
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 42px;
+  --text-4xl: 48px;
+  --text-hero: 100px;
+
+  /* --- Radii --- */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 40px;
+  --radius-pill: 44px;
+  --radius-round: 50%;
+
+  /* --- Spacing scale --- */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 80px;
+  --space-8: 120px;
+
+  /* --- Misc --- */
+  --shadow-card: 0 2px 12px #5a577426;
+  --container-max: 1200px;
+}

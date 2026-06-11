@@ -1,0 +1,158 @@
+---
+import '../styles/tokens.css';
+import '../styles/main.css';
+import '../styles/overrides.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+const { title, description, canonical = 'https://www.indiev.org', noindex = false } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="M2Ea1fzIt-JrQLXsua5du1CLoN9nycXPJ5Ds7ncnWxA" />
+  {noindex && <meta name="robots" content="noindex,follow" />}
+  <link rel="canonical" href={canonical} />
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/images/webclip.png" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://assets.calendly.com" />
+
+  <!-- Consent defaults + Google Tag Manager -->
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
+  <script is:inline src="https://cmp.kpicreatives.com/v1/embed.js" async></script>
+  <script is:inline>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MVDTHPFQ');
+  </script>
+  <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="lFK4tBqLA9KXVpHrEhPubg" async></script>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@id": "https://www.indiev.org#org",
+  "@type": "ProfessionalService",
+  "name": "Indiev Video Editors",
+  "url": "https://www.indiev.org",
+  "description": "Indiev — professional video editing services with unlimited revisions and 24/7 support. We help YouTubers, businesses, and brands turn raw footage into high-quality content.",
+  "telephone": "+1-573-498-2562",
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.youtube.com/@INDIEVORG",
+    "https://www.facebook.com/indiev.org",
+    "https://www.tiktok.com/@indievorg",
+    "https://www.pinterest.com/indievvideoeditors/",
+    "https://www.linkedin.com/company/indiev-video-editors/",
+    "https://x.com/Indievvideoedit",
+    "https://www.instagram.com/indievorg/",
+    "https://www.google.com/maps?cid=6481826325447191756"
+  ],
+  "hasMap": "https://www.google.com/maps?cid=6481826325447191756",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "695 Santa Clara Ave",
+    "addressLocality": "Venice",
+    "addressRegion": "CA",
+    "postalCode": "90291",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "08:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "08:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "08:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "08:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "17:00" }
+  ],
+  "areaServed": [{ "@type": "AdministrativeArea", "name": "United States" }],
+  "knowsAbout": ["Video editing", "Post-production", "YouTube editing", "Product video", "Promo video", "Videography packages"]
+}
+  </script>
+  <script type="application/ld+json" is:inline>
+{ "@context": "https://schema.org", "@type": "WebSite", "url": "https://www.indiev.org", "name": "Indiev Video Editors", "publisher": { "@id": "https://www.indiev.org#org" } }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKP4V9XP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVDTHPFQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <slot />
+
+  <!-- Third-party libs -->
+  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script is:inline src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js" defer></script>
+
+  <!-- Site interactions -->
+  <script>
+    import '../scripts/main.js';
+  </script>
+
+  <!-- Cal.com floating button (book.kpicreatives.com/dima) -->
+  <script is:inline>
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://book.kpicreatives.com/embed/embed.js", "init");
+    Cal("init", { origin: "https://book.kpicreatives.com" });
+    Cal("floatingButton", { calLink: "dima/qualification-15", buttonText: "Schedule a Call", hideButtonIcon: false, buttonColor: "#7b5be9", buttonTextColor: "#ffffff" });
+    Cal("ui", { styles: { branding: { brandColor: "#7b5be9" } }, hideEventTypeDetails: false });
+  </script>
+
+  <!-- Meta Pixel -->
+  <script is:inline>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1140780790493074');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1140780790493074&ev=PageView&noscript=1" alt="" /></noscript>
+
+  <!-- Microsoft UET + Clarity -->
+  <script is:inline>
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"343119446", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  </script>
+  <script is:inline>
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "l8wbby3qfp");
+  </script>
+</body>
+</html>
