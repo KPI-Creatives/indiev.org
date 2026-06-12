@@ -100,8 +100,15 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
 
   <slot />
 
-  <!-- Swiper (self-hosted, deferred — off the render-critical path) -->
-  <script is:inline src="/vendor/swiper/swiper-bundle.min.js" defer onload="document.dispatchEvent(new Event('swiper:ready'))"></script>
+  <!-- Swiper (self-hosted, non-blocking) -->
+  <script is:inline>
+    if (!/[?&]noswiper=1/.test(location.search)) {
+      var swiperScript = document.createElement('script');
+      swiperScript.src = '/vendor/swiper/swiper-bundle.min.js';
+      swiperScript.onload = function () { document.dispatchEvent(new Event('swiper:ready')); };
+      document.head.appendChild(swiperScript);
+    }
+  </script>
 
   <!-- Site interactions -->
   <script>
@@ -112,6 +119,7 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
   <script is:inline>
     (function () {
       var loaded = false;
+      if (/[?&]nothird=1/.test(location.search)) loaded = true; // perf-debug escape hatch
       function loadThirdParty() {
         if (loaded) return; loaded = true;
         // GA4
