@@ -62,3 +62,11 @@ body.no-scroll { overflow: hidden; }
 @media (max-width: 991px) { .hero_main_text.hero_h1 { font-size: 48px; } }
 @media (max-width: 767px) { .hero_main_text.hero_h1 { font-size: 40px; } }
 @media (max-width: 479px) { .hero_main_text.hero_h1 { font-size: 32px; } }
+
+/* --- blog: the legacy .information class is display:none (hidden SEO block); blog shows it --- */
+.information.blog-article { display: block; cursor: auto; }
+.blog-article .information_title { margin-bottom: 24px; }
+.blog-article .information_subtitle { margin-top: 40px; }
+.blog-article table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+.blog-article table th, .blog-article table td { border: 1px solid #ddd; padding: 10px 14px; text-align: left; }
+.blog-article table th { background: var(--color-pink-soft); font-weight: 800; }
