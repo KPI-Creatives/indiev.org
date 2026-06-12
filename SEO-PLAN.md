@@ -45,3 +45,13 @@
 - GA: property пуста, поток `G-89M62CWQ70` мёртв (503) — пересоздать data stream
 - GSC: отправить sitemap после логина
 - Off-site: YouTube-канал + листиклы «best video editing services» — сильнейший фактор AI-цитируемости (r=0.735)
+
+## Дополнение по GSC-экспорту (14.05–10.06, данные старого сайта)
+
+7224 показа / 6 кликов — почти весь инвентарь висел на 30–50 позициях (CTR ~0). Подтверждённые цели:
+
+- **hire-кластер**: ~220 показов на позициях 54–96 ещё ДО создания /hire-video-editor («hire video editors» 41, «video editor for hire» 39, «hire wedding video editor» 31, «wedding video editor for hire» 28). Страница создана 11.06 — следить за ростом.
+- **«video editing 2026»: 532 показа, позиция 12** — крупнейший quick win. Нет целевой страницы. Рекомендация: статья-тренды «Video Editing in 2026: Trends, Costs, AI Tools» (первый материал блога).
+- **Quick wins поз. 4–20**: «video editors» (79 imp, поз. 6.8), «best video editing company» (23, поз. 6.8), GoPro-кластер (40, поз. ~19 — description обновлён), «outsource youtube shorts...bulk» (поз. 4.5).
+- **«white label video production»** (101 imp, поз. 47) — вхождение добавлено на white-label страницу.
+- wedding-outsourcing кластер (~310 imp суммарно) — самый сильный тематический блок старого сайта; перелинковать wedding ↔ outsource-wedding ↔ hire.
