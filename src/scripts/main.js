@@ -101,8 +101,42 @@ ready(() => {
     const phoneCheck = document.getElementById('phone-check');
     const nameCheck = document.getElementById('name-check');
     const validateEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
-    const validatePhone = (v) => /^\+[1-9]\d{3,14}$/.test(v);
+    // Accepts masked values: "+1 (310) 555-1234" or international "+447911123456"
+    const validatePhone = (v) => {
+      const s = v.trim();
+      if (!s.startsWith('+')) return false;
+      const digits = s.replace(/\D/g, '');
+      if (digits.startsWith('1')) return digits.length === 11; // US/Canada: full 10-digit number
+      return digits.length >= 8 && digits.length <= 15; // other countries: E.164
+    };
     const validateName = (v) => v.trim().length >= 2;
+
+    /* phone input mask: US formats as +1 (XXX) XXX-XXXX, other +CC kept as plain digits */
+    const formatPhone = (raw) => {
+      const s = raw.trim();
+      if (s === '' || s === '+') return s;
+      if (s.startsWith('+') && !/^\+1/.test(s)) return '+' + s.replace(/\D/g, '').slice(0, 15);
+      let d = s.replace(/\D/g, '');
+      if (d.startsWith('1')) d = d.slice(1);
+      d = d.slice(0, 10);
+      if (!d.length) return '+1'; // lets backspace walk all the way out of the mask
+      let out = '+1 (' + d.slice(0, 3);
+      if (d.length > 3) out += ') ' + d.slice(3, 6);
+      if (d.length > 6) out += '-' + d.slice(6);
+      return out;
+    };
+    phoneInput.setAttribute('inputmode', 'tel');
+    phoneInput.setAttribute('placeholder', '+1 (310) 555-1234');
+    phoneInput.addEventListener('input', () => {
+      const formatted = formatPhone(phoneInput.value);
+      if (formatted !== phoneInput.value) phoneInput.value = formatted;
+    });
+    phoneInput.addEventListener('focus', () => {
+      if (!phoneInput.value.trim()) phoneInput.value = '+1 ';
+    });
+    phoneInput.addEventListener('blur', () => {
+      if (phoneInput.value.trim() === '+1' || phoneInput.value.trim() === '+') phoneInput.value = '';
+    });
     submitButton.classList.add('disable');
     const checkState = () => {
       submitButton.classList.toggle(
