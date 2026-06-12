@@ -71,8 +71,13 @@ body.no-scroll { overflow: hidden; }
 .blog-article table th, .blog-article table td { border: 1px solid #ddd; padding: 10px 14px; text-align: left; }
 .blog-article table th { background: var(--color-pink-soft); font-weight: 800; }
 
-/* --- pulsing play badge over the hero video (Cloudflare Stream iframe) --- */
-.video_wrapper { position: relative; }
+/* --- pulsing play badge over the hero video (Cloudflare Stream iframe) ---
+   NOTE: on desktop .video_wrapper is position:absolute (anchored to the video section
+   container) — do NOT override it globally, that drops the video out of place.
+   Only mobile (≤767px) has it static and needs a positioning context for the badge. */
+@media (max-width: 767px) {
+  .video_wrapper { position: relative; }
+}
 .video-play-pulse {
   position: absolute; top: 50%; left: 50%;
   transform: translate(-50%, -50%);
