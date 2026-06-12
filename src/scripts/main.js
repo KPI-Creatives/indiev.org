@@ -126,6 +126,9 @@ ready(() => {
     const CRM_ENDPOINT = 'https://crm.kpicreatives.com/webhooks/workflows/45c38966-9698-42cb-9116-d2de9350484f/757d8601-a088-4074-8fcd-a424efe113c3';
     submitButton.addEventListener('click', async (event) => {
       event.preventDefault();
+      // Honeypot: bots fill the hidden "website" field — pretend success, skip CRM
+      const honeypot = submitButton.closest('form')?.querySelector('input[name="website"]');
+      if (honeypot && honeypot.value.trim()) { window.location.href = '/thankyou'; return; }
       submitButton.value = 'Please wait...';
       submitButton.disabled = true;
       const full = nameInput.value.trim().replace(/\s+/g, ' ');
