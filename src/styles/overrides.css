@@ -59,9 +59,30 @@ body.no-scroll { overflow: hidden; }
 /* --- hero: explicit headline, slogan demoted to eyebrow --- */
 .hero_main_text.hero_h1 { font-size: 64px; line-height: 1.16; }
 
-@media (max-width: 991px) { .hero_main_text.hero_h1 { font-size: 48px; } }
-@media (max-width: 767px) { .hero_main_text.hero_h1 { font-size: 40px; } }
-@media (max-width: 479px) { .hero_main_text.hero_h1 { font-size: 32px; } }
+/* second part of the H1 demoted to a compact subheadline (still inside <h1> for SEO) */
+.hero_h1_sub {
+  display: block;
+  margin-top: 14px;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: #1a1a1a;
+}
+
+/* lead paragraph: light, readable, not shouting */
+.hero_text_bottom.hero_lead {
+  max-width: 680px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #4a4a4a;
+}
+.hero_text_bottom.hero_lead strong { font-weight: 800; color: #000; }
+
+@media (max-width: 991px) { .hero_main_text.hero_h1 { font-size: 48px; } .hero_h1_sub { font-size: 22px; } }
+@media (max-width: 767px) { .hero_main_text.hero_h1 { font-size: 40px; } .hero_h1_sub { font-size: 20px; } }
+@media (max-width: 479px) { .hero_main_text.hero_h1 { font-size: 32px; } .hero_h1_sub { font-size: 18px; } .hero_text_bottom.hero_lead { font-size: 16px; } }
 
 /* --- blog: the legacy .information class is display:none (hidden SEO block); blog shows it --- */
 .information.blog-article { display: block; cursor: auto; }
