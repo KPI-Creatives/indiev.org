@@ -200,6 +200,14 @@ ready(() => {
     });
   }
 
+  /* ---------- hide video play pulse once the player is clicked ---------- */
+  window.addEventListener('blur', () => {
+    const ae = document.activeElement;
+    if (ae && ae.tagName === 'IFRAME' && ae.closest('.video_wrapper')) {
+      document.querySelectorAll('.video-play-pulse').forEach((p) => { p.style.display = 'none'; });
+    }
+  });
+
   /* ---------- GTM price-button tracking ---------- */
   document.querySelectorAll('.track_button').forEach((button) => {
     button.addEventListener('click', function () {

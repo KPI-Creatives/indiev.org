@@ -70,3 +70,24 @@ body.no-scroll { overflow: hidden; }
 .blog-article table { border-collapse: collapse; width: 100%; margin: 16px 0; }
 .blog-article table th, .blog-article table td { border: 1px solid #ddd; padding: 10px 14px; text-align: left; }
 .blog-article table th { background: var(--color-pink-soft); font-weight: 800; }
+
+/* --- pulsing play badge over the hero video (Cloudflare Stream iframe) --- */
+.video_wrapper { position: relative; }
+.video-play-pulse {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 84px; height: 84px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none; /* clicks pass through to the player */
+  z-index: 2;
+  padding-left: 6px;
+  animation: playPulse 1.8s ease-out infinite;
+}
+@keyframes playPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(205, 16, 255, 0.55); }
+  70%  { box-shadow: 0 0 0 28px rgba(205, 16, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(205, 16, 255, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .video-play-pulse { animation: none; } }
