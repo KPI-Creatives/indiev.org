@@ -168,6 +168,11 @@ ready(() => {
   }
 
   /* ---------- accordions ---------- */
+  // Webflow export leaves inline height:0 on collapsible blocks — strip it so CSS max-height takes over
+  document.querySelectorAll('.question_content_wrapper, .text_wrapper_accordion').forEach((el) => {
+    el.style.removeProperty('height');
+  });
+
   document.querySelectorAll('.accordion_title_wrapper').forEach((t) => {
     t.addEventListener('click', () => t.closest('.accordion_item').classList.toggle('open'));
   });
