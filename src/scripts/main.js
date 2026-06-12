@@ -16,8 +16,8 @@ ready(() => {
     });
   }
 
-  /* ---------- pricing swiper ---------- */
-  if (window.Swiper) {
+  /* ---------- swipers (Swiper itself loads lazily after window.load) ---------- */
+  const initSwipers = () => {
     document.querySelectorAll('.slide-content').forEach((el) => {
       new window.Swiper(el, {
         slidesPerView: 3,
@@ -35,7 +35,25 @@ ready(() => {
         },
       });
     });
-  }
+    const fbList = document.querySelector('.projects-col-list');
+    if (fbList) {
+      const wrap = fbList.parentElement;
+      wrap.classList.add('swiper');
+      fbList.classList.add('swiper-wrapper');
+      fbList.querySelectorAll(':scope > .projects-col-item').forEach((el) => el.classList.add('swiper-slide'));
+      new window.Swiper(wrap, {
+        spaceBetween: 10,
+        loop: true,
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          600: { slidesPerView: 2 },
+          992: { slidesPerView: 3 },
+        },
+      });
+    }
+  };
+  if (window.Swiper) initSwipers();
+  else document.addEventListener('swiper:ready', initSwipers, { once: true });
 
   /* ---------- pricing toggle (subscription / flat rates) ---------- */
   const btnYear = document.querySelector('.button-year');
@@ -186,24 +204,6 @@ ready(() => {
       span.closest('.seo_text_container')?.classList.toggle('expanded');
     });
   });
-
-  /* ---------- portfolio feedbacks carousel (replaces owlCarousel) ---------- */
-  const fbList = document.querySelector('.projects-col-list');
-  if (fbList && window.Swiper) {
-    const wrap = fbList.parentElement;
-    wrap.classList.add('swiper');
-    fbList.classList.add('swiper-wrapper');
-    fbList.querySelectorAll(':scope > .projects-col-item').forEach((el) => el.classList.add('swiper-slide'));
-    new window.Swiper(wrap, {
-      spaceBetween: 10,
-      loop: true,
-      breakpoints: {
-        0: { slidesPerView: 1 },
-        600: { slidesPerView: 2 },
-        992: { slidesPerView: 3 },
-      },
-    });
-  }
 
   /* ---------- hide video play pulse once the player is clicked ---------- */
   window.addEventListener('blur', () => {

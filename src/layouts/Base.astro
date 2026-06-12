@@ -48,9 +48,6 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
     });
   </script>
 
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
-
   <!-- Structured data -->
   <script type="application/ld+json" is:inline>
 {
@@ -102,8 +99,23 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
 
   <slot />
 
-  <!-- Third-party libs -->
-  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Swiper (self-hosted, loaded after window.load so it never blocks render) -->
+  <script is:inline>
+    (function () {
+      function loadSwiper() {
+        if (!document.querySelector('.slide-content') && !document.querySelector('.projects-col-list')) return;
+        var l = document.createElement('link');
+        l.rel = 'stylesheet'; l.href = '/vendor/swiper/swiper-bundle.min.css';
+        document.head.appendChild(l);
+        var s = document.createElement('script');
+        s.src = '/vendor/swiper/swiper-bundle.min.js';
+        s.onload = function () { document.dispatchEvent(new Event('swiper:ready')); };
+        document.head.appendChild(s);
+      }
+      if (document.readyState === 'complete') loadSwiper();
+      else window.addEventListener('load', loadSwiper, { once: true });
+    })();
+  </script>
 
   <!-- Site interactions -->
   <script>
