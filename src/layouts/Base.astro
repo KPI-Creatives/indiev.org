@@ -32,9 +32,8 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
   <link rel="preload" as="font" type="font/woff2" href="/fonts/Mulish-Black.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="/fonts/Avenir-Light.woff2" crossorigin />
   <link rel="preconnect" href="https://www.googletagmanager.com" />
-  <link rel="preconnect" href="https://assets.calendly.com" />
 
-  <!-- Consent defaults + Google Tag Manager -->
+  <!-- Consent defaults (lightweight, inline) -->
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -48,20 +47,6 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
       'wait_for_update': 500
     });
   </script>
-  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-F3NVLVT8FX"></script>
-  <script is:inline>
-    gtag('js', new Date());
-    gtag('config', 'G-F3NVLVT8FX');
-  </script>
-  <script is:inline src="https://cmp.kpicreatives.com/v1/embed.js" async></script>
-  <script is:inline>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MVDTHPFQ');
-  </script>
-  <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="lFK4tBqLA9KXVpHrEhPubg" async></script>
 
   <!-- Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
@@ -113,53 +98,50 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKP4V9XP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVDTHPFQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <slot />
 
   <!-- Third-party libs -->
   <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script is:inline src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js" defer></script>
 
   <!-- Site interactions -->
   <script>
     import '../scripts/main.js';
   </script>
 
-  <!-- Cal.com floating button (book.kpicreatives.com/dima) -->
+  <!-- Deferred trackers: GA4 + GTM + CMP + Cal.com load on first interaction or after 3.5s idle -->
   <script is:inline>
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://book.kpicreatives.com/embed/embed.js", "init");
-    Cal("init", { origin: "https://book.kpicreatives.com" });
-    Cal("floatingButton", { calLink: "dima/qualification-15", buttonText: "Schedule a Call", hideButtonIcon: false, buttonColor: "#7b5be9", buttonTextColor: "#ffffff" });
-    Cal("ui", { styles: { branding: { brandColor: "#7b5be9" } }, hideEventTypeDetails: false });
-  </script>
-
-  <!-- Meta Pixel -->
-  <script is:inline>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1140780790493074');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1140780790493074&ev=PageView&noscript=1" alt="" /></noscript>
-
-  <!-- Microsoft UET + Clarity -->
-  <script is:inline>
-    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"343119446", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
-  </script>
-  <script is:inline>
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "l8wbby3qfp");
+    (function () {
+      var loaded = false;
+      function loadThirdParty() {
+        if (loaded) return; loaded = true;
+        // GA4
+        var ga = document.createElement('script');
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-F3NVLVT8FX'; ga.async = true;
+        document.head.appendChild(ga);
+        gtag('js', new Date());
+        gtag('config', 'G-F3NVLVT8FX');
+        // GTM
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MVDTHPFQ');
+        // Cookie consent (CMP)
+        var cmp = document.createElement('script');
+        cmp.src = 'https://cmp.kpicreatives.com/v1/embed.js'; cmp.async = true;
+        document.head.appendChild(cmp);
+        // Cal.com floating button (book.kpicreatives.com/dima)
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://book.kpicreatives.com/embed/embed.js", "init");
+        Cal("init", { origin: "https://book.kpicreatives.com" });
+        Cal("floatingButton", { calLink: "dima/qualification-15", buttonText: "Schedule a Call", hideButtonIcon: false, buttonColor: "#7b5be9", buttonTextColor: "#ffffff" });
+        Cal("ui", { styles: { branding: { brandColor: "#7b5be9" } }, hideEventTypeDetails: false });
+      }
+      ['scroll','mousemove','touchstart','keydown','click'].forEach(function (e) {
+        window.addEventListener(e, loadThirdParty, { once: true, passive: true });
+      });
+      setTimeout(loadThirdParty, 3500);
+    })();
   </script>
 </body>
 </html>
