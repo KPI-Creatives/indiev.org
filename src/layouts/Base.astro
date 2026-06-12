@@ -2,6 +2,7 @@
 import '../styles/tokens.css';
 import '../styles/main.css';
 import '../styles/overrides.css';
+import '../styles/swiper.css';
 
 interface Props {
   title: string;
@@ -99,23 +100,8 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
 
   <slot />
 
-  <!-- Swiper (self-hosted, loaded after window.load so it never blocks render) -->
-  <script is:inline>
-    (function () {
-      function loadSwiper() {
-        if (!document.querySelector('.slide-content') && !document.querySelector('.projects-col-list')) return;
-        var l = document.createElement('link');
-        l.rel = 'stylesheet'; l.href = '/vendor/swiper/swiper-bundle.min.css';
-        document.head.appendChild(l);
-        var s = document.createElement('script');
-        s.src = '/vendor/swiper/swiper-bundle.min.js';
-        s.onload = function () { document.dispatchEvent(new Event('swiper:ready')); };
-        document.head.appendChild(s);
-      }
-      if (document.readyState === 'complete') loadSwiper();
-      else window.addEventListener('load', loadSwiper, { once: true });
-    })();
-  </script>
+  <!-- Swiper (self-hosted, deferred — off the render-critical path) -->
+  <script is:inline src="/vendor/swiper/swiper-bundle.min.js" defer onload="document.dispatchEvent(new Event('swiper:ready'))"></script>
 
   <!-- Site interactions -->
   <script>
