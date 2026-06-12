@@ -166,22 +166,17 @@ ready(() => {
     });
   }
 
-  /* ---------- empowering list: rotating highlight ---------- */
+  /* ---------- empowering list: user-initiated highlight ----------
+     Auto-rotation removed: it expanded/collapsed item text on a timer,
+     producing ~0.13 scroll-triggered CLS. Hover/tap shifts are
+     user-initiated and excluded from CLS. */
   const items = document.querySelectorAll('.vertical_item');
   if (items.length) {
-    let currentIndex = 0;
-    let isHovered = false;
     const setHover = (index) => items.forEach((item, i) => item.classList.toggle('hovered', i === index));
     setHover(0);
-    setInterval(() => {
-      if (!isHovered) {
-        currentIndex = (currentIndex + 1) % items.length;
-        setHover(currentIndex);
-      }
-    }, 5000);
     items.forEach((item, index) => {
-      item.addEventListener('mouseenter', () => { isHovered = true; currentIndex = index; setHover(index); });
-      item.addEventListener('mouseleave', () => { isHovered = false; });
+      item.addEventListener('mouseenter', () => setHover(index));
+      item.addEventListener('click', () => setHover(index));
     });
   }
 
