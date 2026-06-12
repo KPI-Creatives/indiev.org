@@ -39,13 +39,20 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // Default: analytics granted (93% of traffic is US), ads denied everywhere.
     gtag('consent', 'default', {
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
       'ad_personalization': 'denied',
-      'analytics_storage': 'denied',
+      'analytics_storage': 'granted',
       'functionality_storage': 'granted',
       'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+    // GDPR regions (EU/EEA + UK + CH): analytics denied until the CMP records consent.
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
       'wait_for_update': 500
     });
   </script>
