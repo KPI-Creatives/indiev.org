@@ -1,10 +1,23 @@
+---
+const services = [
+  { href: '/sp/outsource-youtube-video-editing-services', label: 'YouTube video editing' },
+  { href: '/sp/wedding-video-editing-services', label: 'Wedding video editing' },
+  { href: '/sp/real-estate-video-editing-services', label: 'Real estate video editing' },
+  { href: '/sp/outsource-video-editing-services', label: 'Outsource video editing' },
+  { href: '/sp/white-label-video-editing-services', label: 'White label editing for agencies' },
+  { href: '/sp/best-online-video-editing-service', label: 'Online video editing service' },
+  { href: '/sp/social-media-video-editing-services', label: 'Social media & Reels editing' },
+  { href: '/sp/corporate-video-editing-services', label: 'Corporate video editing' },
+];
+---
 <section class="service_section">
 <div class="main_container">
 <div class="service_heading-block">
-<h2 class="empowering_subtitle how_work_subtitle"><span class="empowering_subtitle_span"> Video Editing Services </span><br/>We Offer</h2>
-<p class="text-block-2 ta-center"> Choose a service or combine several. All are available inside our unlimited video editing services model.</p>
+<h2 class="empowering_subtitle how_work_subtitle"><span class="empowering_subtitle_span"> What Video Editing Services </span><br/>Do We Offer?</h2>
+<p class="text-block-2 ta-center"> Choose a service or combine several. All are available inside our unlimited video editing model.</p>
 </div>
 <div class="w-layout-grid links_grid">
+{services.map((s) => (
 <div class="price-item jc-left">
 <div class="done-icon-container">
 <div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
@@ -12,287 +25,10 @@
 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
 </svg></div>
 </div>
-<a class="footer_link" href="/sp/outsource-real-estate-video-editing-services">outsource real estate video editing services</a>
+<a class="footer_link" href={s.href}>{s.label}</a>
 </div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
+))}
 </div>
-<a class="footer_link" href="/sp/outsource-wedding-video-editing-services">outsource wedding video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/outsource-youtube-video-editing-services">outsource YouTube video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/outsource-video-editing-services">outsource video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/audio-video-editing-services">audio video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/video-shoot-editing-services">video shoot &amp; editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/business-video-editing-services">business video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/post-production-video-editing-services">post-production video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/remote-video-editing-services">remote video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/corporate-video-editing-services">corporate video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/wedding-video-editing-services">wedding video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/real-estate-drone-video-editing-services">real estate drone video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/4k-video-editing-services">4k video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/event-video-editing-services">event video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/best-online-video-editing-service">best online video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/gopro-video-editing-services">GoPro video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/real-estate-video-editing-services">real estate video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/best-video-editing-services">best video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/reels-video-editing-services">reels video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/white-label-video-editing-services">white label video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/creative-video-editing-services">creative video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/affordable-video-editing-services">affordable video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/interview-video-editing-services">interview video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/social-media-video-editing-services">social media video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/digital-video-editing-services">digital video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/sports-video-editing-services">sports video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/freelance-video-editing-services">freelance video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/instagram-video-editing-services">Instagram video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/video-editing-services-for-business">video editing services for business</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/tiktok-video-editing-services">TikTok video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/outsource-corporate-video-editing-services">outsource corporate video editing services</a>
-</div>
-<div class="price-item jc-left">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<a class="footer_link" href="/sp/indiev-becomes-a-designrush-accredited-agency">Indiev becomes a design rush accredited agency</a>
-</div><div class="price-item jc-left"><div class="done-icon-container"><div class="code-embed w-embed"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="#7b5be9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div></div><a class="footer_link" href="/sp/video-production-consulting">video production consulting</a></div><div class="price-item jc-left"><div class="done-icon-container"><div class="code-embed w-embed"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="#7b5be9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div></div><a class="footer_link" href="/sp/music-video-production-company-los-angeles">music video production in Los Angeles</a></div><div class="price-item jc-left"><div class="done-icon-container"><div class="code-embed w-embed"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="#7b5be9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div></div><a class="footer_link" href="/hire-video-editor">hire a video editor</a></div>
-</div>
+<p class="text-block-2 ta-center" style="margin-top: 32px;"><a class="footer_link" href="/services"><strong>Browse all 35 video editing services →</strong></a></p>
 </div>
 </section>

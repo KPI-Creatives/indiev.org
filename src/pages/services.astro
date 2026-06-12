@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import AnyCta from '../components/AnyCta.astro';
+import Footer from '../components/Footer.astro';
+
+const services = [
+  { href: '/sp/best-video-editing-services', label: 'best video editing services' },
+  { href: '/sp/affordable-video-editing-services', label: 'affordable video editing services' },
+  { href: '/sp/best-online-video-editing-service', label: 'best online video editing services' },
+  { href: '/sp/outsource-video-editing-services', label: 'outsource video editing services' },
+  { href: '/sp/remote-video-editing-services', label: 'remote video editing services' },
+  { href: '/sp/white-label-video-editing-services', label: 'white label video editing services' },
+  { href: '/sp/freelance-video-editing-services', label: 'freelance video editing services' },
+  { href: '/hire-video-editor', label: 'hire a video editor' },
+  { href: '/sp/outsource-youtube-video-editing-services', label: 'outsource YouTube video editing services' },
+  { href: '/sp/reels-video-editing-services', label: 'reels video editing services' },
+  { href: '/sp/instagram-video-editing-services', label: 'Instagram video editing services' },
+  { href: '/sp/tiktok-video-editing-services', label: 'TikTok video editing services' },
+  { href: '/sp/social-media-video-editing-services', label: 'social media video editing services' },
+  { href: '/sp/interview-video-editing-services', label: 'interview video editing services' },
+  { href: '/sp/real-estate-video-editing-services', label: 'real estate video editing services' },
+  { href: '/sp/outsource-real-estate-video-editing-services', label: 'outsource real estate video editing services' },
+  { href: '/sp/real-estate-drone-video-editing-services', label: 'real estate drone video editing services' },
+  { href: '/sp/wedding-video-editing-services', label: 'wedding video editing services' },
+  { href: '/sp/outsource-wedding-video-editing-services', label: 'outsource wedding video editing services' },
+  { href: '/sp/event-video-editing-services', label: 'event video editing services' },
+  { href: '/sp/sports-video-editing-services', label: 'sports video editing services' },
+  { href: '/sp/gopro-video-editing-services', label: 'GoPro video editing services' },
+  { href: '/sp/business-video-editing-services', label: 'business video editing services' },
+  { href: '/sp/corporate-video-editing-services', label: 'corporate video editing services' },
+  { href: '/sp/outsource-corporate-video-editing-services', label: 'outsource corporate video editing services' },
+  { href: '/sp/video-editing-services-for-business', label: 'video editing services for business' },
+  { href: '/sp/digital-video-editing-services', label: 'digital video editing services' },
+  { href: '/sp/creative-video-editing-services', label: 'creative video editing services' },
+  { href: '/sp/4k-video-editing-services', label: '4K video editing services' },
+  { href: '/sp/audio-video-editing-services', label: 'audio video editing services' },
+  { href: '/sp/post-production-video-editing-services', label: 'post-production video editing services' },
+  { href: '/sp/video-shoot-editing-services', label: 'video shoot & editing services' },
+  { href: '/sp/video-production-consulting', label: 'video production consulting' },
+  { href: '/sp/music-video-production-company-los-angeles', label: 'music video production in Los Angeles' },
+  { href: '/expert-video-editing', label: 'expert video editing' },
+];
+---
+<Base
+  title="All Video Editing Services — Full Catalog | Indiev"
+  description="Every video editing service Indiev offers: YouTube, wedding, real estate, corporate, social media, 4K, white label and more. Flat plans from $24/day, 24–48h turnaround."
+  canonical="https://www.indiev.org/services"
+>
+  <Navbar />
+  <div class="main">
+    <section class="service_section">
+      <div class="main_container">
+        <div class="service_heading-block">
+          <h1 class="empowering_subtitle how_work_subtitle"><span class="empowering_subtitle_span">All Video Editing Services</span><br/>We Offer</h1>
+          <p class="text-block-2 ta-center">Every service below is available as a one-off project or inside our unlimited video editing plans — flat pricing from $24/day, unlimited revisions, 24–48 hour turnaround.</p>
+        </div>
+        <div class="w-layout-grid links_grid">
+          {services.map((s) => (
+            <div class="price-item jc-left">
+              <div class="done-icon-container">
+                <div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
+                </svg></div>
+              </div>
+              <a class="footer_link" href={s.href}>{s.label}</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    <AnyCta />
+  </div>
+  <Footer />
+</Base>
