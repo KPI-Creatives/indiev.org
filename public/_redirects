@@ -1,0 +1,21 @@
+# Ported from Webflow 301 redirects (first 20 of 41; remainder from CSV export)
+/sp/video-podcast-editing-services https://www.start-podcast.com/podcast-video-editing 301
+/sp/podcast-video-editing-services https://www.start-podcast.com/podcast-video-editing 301
+/sp/music-video-editing-services https://www.start-podcast.com/podcast-audio-editing 301
+/sp/affordable-wedding-video-editing-services /sp/marriage-video-editing-services 301
+/sp/reliable-video-editing-services / 301
+/sp/video-editing-subscription-services / 301
+/sp/video-editing-services / 301
+/sp/video-editing-and-production-services / 301
+/sp/unlimited-video-editing-services / 301
+/sp/specialized-video-editing-services / 301
+/sp/professional-video-editing-services / 301
+/sp/professional-animated-video-editing-services / 301
+/sp/personal-video-editing-services / 301
+/sp/online-video-editing-services / 301
+/sp/high-quality-video-editing-services / 301
+/sp/high-definition-video-editing-services / 301
+/sp/cheap-video-editing-services /sp/affordable-video-editing-services 301
+/sp/webinar-video-editing-services / 301
+/sp/virtual-video-editing-services / 301
+/sp/video-shooting-and-editing-services / 301
