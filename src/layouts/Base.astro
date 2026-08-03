@@ -32,30 +32,29 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
   <link rel="apple-touch-icon" href="/images/webclip.png" />
   <link rel="preload" as="font" type="font/woff2" href="/fonts/Mulish-Black.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="/fonts/Avenir-Light.woff2" crossorigin />
-  <link rel="preconnect" href="https://www.googletagmanager.com" />
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin />
-
-  <!-- Consent defaults (lightweight, inline) -->
+  <!-- Establish consent before any optional third-party tag can run. -->
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    // Default: analytics granted (93% of traffic is US), ads denied everywhere.
-    gtag('consent', 'default', {
+    window.gtag = window.gtag || function gtag() {
+      window.dataLayer.push(arguments);
+      if (arguments[0] === 'consent' && arguments[1] === 'update') {
+        window.dispatchEvent(new CustomEvent('indiev:consent-update', {
+          detail: arguments[2] || {}
+        }));
+      }
+    };
+    window.gtag('consent', 'default', {
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
       'ad_personalization': 'denied',
-      'analytics_storage': 'granted',
-      'functionality_storage': 'granted',
-      'security_storage': 'granted',
-      'wait_for_update': 500
-    });
-    // GDPR regions (EU/EEA + UK + CH): analytics denied until the CMP records consent.
-    gtag('consent', 'default', {
       'analytics_storage': 'denied',
-      'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
-      'wait_for_update': 500
+      'functionality_storage': 'denied',
+      'personalization_storage': 'denied',
+      'security_storage': 'granted'
     });
   </script>
+  <!-- The CMP is necessary to collect a choice; GA remains absent until analytics consent. -->
+  <script src="https://cmp.kpicreatives.com/v1/embed.js" defer></script>
 
   <!-- Structured data -->
   <script type="application/ld+json" is:inline>
@@ -153,48 +152,58 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
     })();
   </script>
 
-  <!-- Analytics: single GA4 tag (= GA property 420671961 "indiev.org").
-       GTM container removed — its tags pointed to a GA property outside our accounts;
-       its 5 event tags are reimplemented below as plain gtag() events.
-       gtag.js + CMP load deferred: on first interaction or after 3.5s idle. -->
+  <!-- Basic consent mode: GA4 is not requested until analytics consent is granted. -->
   <script is:inline>
     (function () {
-      var loaded = false;
-      if (/[?&]nothird=1/.test(location.search)) loaded = true; // perf-debug escape hatch
-      function loadThirdParty() {
-        if (loaded) return; loaded = true;
-        // GA4 (gtag stub in <head> queues events fired before the library arrives)
+      var measurementId = 'G-F3NVLVT8FX';
+      var analyticsGranted = false;
+      var analyticsLoaded = false;
+      var analyticsDisabledKey = 'ga-disable-' + measurementId;
+      var thirdPartyDisabled = /[?&]nothird=1/.test(location.search);
+
+      // Block measurement defensively until the CMP emits an explicit grant.
+      window[analyticsDisabledKey] = true;
+
+      function loadAnalytics() {
+        if (analyticsLoaded || !analyticsGranted || thirdPartyDisabled) return;
+        analyticsLoaded = true;
+        window[analyticsDisabledKey] = false;
+
         var ga = document.createElement('script');
-        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-F3NVLVT8FX'; ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+        ga.async = true;
         document.head.appendChild(ga);
-        gtag('js', new Date());
-        gtag('config', 'G-F3NVLVT8FX');
-        // Cookie consent (CMP)
-        var cmp = document.createElement('script');
-        cmp.src = 'https://cmp.kpicreatives.com/v1/embed.js'; cmp.async = true;
-        document.head.appendChild(cmp);
+
+        window.gtag('js', new Date());
+        window.gtag('config', measurementId);
+
+        if (location.href.indexOf('calendly') !== -1) {
+          window.gtag('event', 'Page calendly');
+        }
       }
-      ['scroll','mousemove','touchstart','keydown','click'].forEach(function (e) {
-        window.addEventListener(e, loadThirdParty, { once: true, passive: true });
+
+      window.addEventListener('indiev:consent-update', function (event) {
+        analyticsGranted = event.detail.analytics_storage === 'granted';
+        window[analyticsDisabledKey] = !analyticsGranted;
+        if (analyticsGranted) loadAnalytics();
       });
-      setTimeout(loadThirdParty, 3500);
 
       // --- GA4 events, migrated 1:1 from the GTM container ---
       // price_card_button: click on a .price_card_button element
       // book_scroll: click on the "Schedule a Call" button (was .calendly-badge-content)
       document.addEventListener('click', function (e) {
+        if (!analyticsGranted || !analyticsLoaded) return;
         var el = e.target && e.target.closest ? e.target : null;
         if (!el) return;
-        if (el.closest('.price_card_button')) gtag('event', 'price_card_button');
-        if (el.closest('#cal-fab, .calendly-badge-content')) gtag('event', 'book_scroll');
+        if (el.closest('.price_card_button')) window.gtag('event', 'price_card_button');
+        if (el.closest('#cal-fab, .calendly-badge-content')) window.gtag('event', 'book_scroll');
       }, true);
       // "Form submit": any form; "Subscribe_form": the #email-form newsletter form
       document.addEventListener('submit', function (e) {
-        gtag('event', 'Form submit');
-        if (e.target && e.target.id === 'email-form') gtag('event', 'Subscribe_form');
+        if (!analyticsGranted || !analyticsLoaded) return;
+        window.gtag('event', 'Form submit');
+        if (e.target && e.target.id === 'email-form') window.gtag('event', 'Subscribe_form');
       }, true);
-      // "Page calendly": pageview on URLs containing "calendly"
-      if (location.href.indexOf('calendly') !== -1) gtag('event', 'Page calendly');
     })();
   </script>
 </body>
