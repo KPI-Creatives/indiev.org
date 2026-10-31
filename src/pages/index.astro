@@ -6,19 +6,16 @@ import VideoSection from '../components/VideoSection.astro';
 import SeoSection from '../components/SeoSection.astro';
 import Empowering from '../components/Empowering.astro';
 import Services from '../components/Services.astro';
-import Pricing from '../components/Pricing.astro';
-import SpecificCta from '../components/SpecificCta.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import YouWillGet from '../components/YouWillGet.astro';
 import Faq from '../components/Faq.astro';
-import AnyCta from '../components/AnyCta.astro';
-import Consultation from '../components/Consultation.astro';
+import ClosureNotice from '../components/ClosureNotice.astro';
 import Information from '../components/Information.astro';
 import Footer from '../components/Footer.astro';
 ---
 <Base
-  title="Professional Video Editing Services — Unlimited Edits in 24–48h | Indiev"
-  description="Indiev is a Los Angeles video editing company: unlimited edits from $24/day for YouTube, real estate, weddings and brands. Unlimited revisions, art-director QA, 24–48h delivery."
+  title="Professional Video Editing Services: Guides and Insights | Indiev"
+  description="Indiev was a Los Angeles video editing company for YouTube, real estate, weddings and brands. INDIEV has ceased operations; its video editing guides remain available."
 >
   <Navbar />
   <div class="main">
@@ -27,20 +24,14 @@ import Footer from '../components/Footer.astro';
     <SeoSection />
     <Empowering />
     <Services />
-    <Pricing />
-    <SpecificCta />
+    <ClosureNotice />
     <HowItWorks />
     <YouWillGet />
     <Faq />
-    <AnyCta />
-    <Consultation />
     <Information />
   </div>
   <script type="application/ld+json" is:inline>
-{"@context":"https://schema.org","@type":"OfferCatalog","@id":"https://www.indiev.org#services","name":"Video Editing Services","itemListElement":[{"@type":"OfferCatalog","name":"Video editing & post-production"},{"@type":"OfferCatalog","name":"Product & promo video creation"},{"@type":"OfferCatalog","name":"YouTube editing (music/effects/subtitles)"},{"@type":"OfferCatalog","name":"Videography packages"}],"provider":{"@id":"https://www.indiev.org#org"}}
-  </script>
-  <script type="application/ld+json" is:inline>
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does the video editing process work?","acceptedAnswer":{"@type":"Answer","text":"Our process begins with your project brief, followed by professional editing, reviews, and final delivery. You have access to an account for easy file uploads and communication."}},{"@type":"Question","name":"What is the turnaround time for videos?","acceptedAnswer":{"@type":"Answer","text":"First drafts arrive within 48 hours and follow-up edits within 24 hours. Guaranteed delivery windows depend on your plan: Basic — 2-3 business days, Pro — 1-2 business days, Ultimate — same-day or next-day service."}},{"@type":"Question","name":"Is there a limit to revisions?","acceptedAnswer":{"@type":"Answer","text":"No. We offer unlimited revisions in every plan to ensure your complete satisfaction with the final video."}},{"@type":"Question","name":"How much does video editing cost at Indiev?","acceptedAnswer":{"@type":"Answer","text":"Flat monthly plans start at $24 per day: $800/month for up to 7 videos, $1,800/month for up to 18 (Pro), and $3,000/month for up to 36 (Ultimate). Single videos start at $100."}},{"@type":"Question","name":"What types of videos can you edit?","acceptedAnswer":{"@type":"Answer","text":"We edit YouTube videos and podcasts, Reels, Shorts and TikTok clips, real estate tours, wedding films, corporate, product and promotional videos — and adapt to your editing style and brand guidelines."}},{"@type":"Question","name":"What if I'm not satisfied with the final video?","acceptedAnswer":{"@type":"Answer","text":"We keep revising until you approve — every plan includes unlimited revisions. Leave frame-accurate comments directly in Frame.io and we apply them within 24 hours."}},{"@type":"Question","name":"How do you ensure the confidentiality and security of my footage?","acceptedAnswer":{"@type":"Answer","text":"We use secure file transfer methods and our cloud storage ensures the confidentiality and security of your footage."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is INDIEV still operating?","acceptedAnswer":{"@type":"Answer","text":"No. INDIEV has ceased operations and is no longer accepting new projects. The articles and guides on this site remain available as a public resource."}},{"@type":"Question","name":"What types of videos did INDIEV edit?","acceptedAnswer":{"@type":"Answer","text":"INDIEV edited YouTube videos and podcasts, Reels, Shorts and TikTok clips, real estate tours, wedding films, and corporate, product and promotional videos."}},{"@type":"Question","name":"How did the INDIEV editing process work?","acceptedAnswer":{"@type":"Answer","text":"Projects started with a brief, followed by professional editing, art-director review, client feedback in Frame.io, and final delivery."}},{"@type":"Question","name":"How should video footage be kept confidential and secure?","acceptedAnswer":{"@type":"Answer","text":"Use secure file transfer and access-controlled cloud storage, and share review links only with the people who need them."}}]}
   </script>
   <Footer />
 </Base>

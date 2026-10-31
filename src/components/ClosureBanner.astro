@@ -1,0 +1,25 @@
+<div class="closure-banner" role="note">
+  <p class="closure-banner__text">INDIEV has ceased operations and is no longer accepting new projects. Thank you to every client and partner we worked with — the articles on this site remain available as a public resource.</p>
+</div>
+<style>
+  .closure-banner {
+    background-color: var(--color-ink);
+    color: var(--color-white);
+    padding: 10px 16px;
+    position: relative;
+    z-index: 901;
+  }
+  .closure-banner__text {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    text-align: center;
+    color: inherit;
+  }
+  @media (max-width: 479px) {
+    .closure-banner { padding: 8px 16px; }
+    .closure-banner__text { font-size: 13px; text-align: left; }
+  }
+</style>

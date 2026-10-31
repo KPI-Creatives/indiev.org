@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import ClosureNotice from '../components/ClosureNotice.astro';
 const extraHead = ``;
 ---
 <Base
@@ -31,7 +32,6 @@ const extraHead = ``;
 <div class="welcome_text_container">
 <h2 class="welcome_subtitle"> Welcome to INDIEV,</h2>
 <p class="paragraph-4">where we transform your ideas into compelling video content. Our team of skilled editors and motion graphics experts is dedicated to delivering high-quality videos that resonate with your audience and elevate your brand.</p>
-<a class="button-4 w-button" data-w-id="84cb5251-cec3-5266-6e6c-6793ad651ae3" href="/#pricing">Get the Price</a>
 </div>
 </div>
 </div>
@@ -79,7 +79,6 @@ const extraHead = ``;
 </div>
 </div>
 </div>
-<a class="offer_button w-button" href="/signup-pricing">Start My Video Project</a>
 </div>
 </div>
 </section>
@@ -405,41 +404,8 @@ const extraHead = ``;
 </div>
 </div>
 </section>
-<section class="instruction">
-<div class="main_container">
-<ul class="instruction_list w-list-unstyled" role="list">
-<li class="how_work_item instruction_item">
-<div class="item_number">1</div>
-<h3 class="item_subtitle">Schedule a Call</h3>
-<p class="item_text">Book a call with us to discuss your video project and specific needs</p>
-</li>
-<li class="how_work_item instruction_item">
-<div class="item_number">2</div>
-<h3 class="item_subtitle">Discuss Your Vision</h3>
-<p class="item_text">Share your goals and creative ideas with our team.</p>
-</li>
-<li class="how_work_item instruction_item">
-<div class="item_number">3</div>
-<h3 class="item_subtitle">Receive Your First Edit</h3>
-<p class="item_text">Get your initial video edit quickly and efficiently.</p>
-</li>
-<li class="how_work_item instruction_item">
-<div class="item_number">4</div>
-<h3 class="item_subtitle">Unlimited Revisions</h3>
-<p class="item_text">We’ll revise your video until it’s exactly how you want it.</p>
-</li>
-</ul>
-</div>
-</section>
-<section class="elevate about_join instruction_join_section">
-<div class="main_container">
-<h2 class="examples_title evaluate_title instruction_title"> Ready to Elevate <br/>Your Video Content?</h2>
-<p class="evaluate_text">Schedule a Call Today and Let's Get Started!</p>
-<div class="buton_container">
-<a class="call portfolio_boton gtm_class w-button" data-w-id="1229cdcc-897c-3de4-d490-e36d0e1a7528" href="/calendly">Schedule free 30-Min Call</a>
-</div>
-</div>
-</section>
+
+<ClosureNotice />
 </main><div class="w-embed">
 <style>
 @media screen and (min-width: 900px) and (max-width: 991px) {

@@ -3,6 +3,7 @@ import '../styles/tokens.css';
 import '../styles/main.css';
 import '../styles/overrides.css';
 import '../styles/swiper.css';
+import ClosureBanner from '../components/ClosureBanner.astro';
 
 interface Props {
   title: string;
@@ -26,7 +27,7 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-site-verification" content="M2Ea1fzIt-JrQLXsua5du1CLoN9nycXPJ5Ds7ncnWxA" />
-  {noindex && <meta name="robots" content="noindex,follow" />}
+  {noindex && <meta name="robots" content="noindex, follow" />}
   <link rel="canonical" href={canonical} />
   <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
   <link rel="apple-touch-icon" href="/images/webclip.png" />
@@ -64,9 +65,13 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
   "@type": "ProfessionalService",
   "name": "Indiev Video Editors",
   "url": "https://www.indiev.org",
-  "description": "Indiev — professional video editing services with unlimited revisions and 24/7 support. We help YouTubers, businesses, and brands turn raw footage into high-quality content.",
-  "telephone": "+1-747-677-1203",
-  "priceRange": "$$",
+  "description": "Indiev was a video editing service based in Venice, Los Angeles, operated by KPI Creatives. It ceased operations on October 30, 2026; its articles remain available as a public resource.",
+  "dissolutionDate": "2026-10-30",
+  "parentOrganization": { "@type": "Organization", "name": "KPI Creatives", "url": "https://www.kpicreatives.com" },
+  "founder": [
+    { "@type": "Person", "name": "Yaro Korets", "url": "https://korets.net", "sameAs": ["https://korets.net"] },
+    { "@type": "Person", "name": "Dmytro Pavlenko", "url": "https://www.linkedin.com/in/pavlenkodmytro/", "sameAs": ["https://www.linkedin.com/in/pavlenkodmytro/"] }
+  ],
   "sameAs": [
     "https://www.youtube.com/@INDIEVORG",
     "https://www.facebook.com/indiev.org",
@@ -86,13 +91,6 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
     "postalCode": "90291",
     "addressCountry": "US"
   },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "08:00", "closes": "17:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "08:00", "closes": "17:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "08:00", "closes": "17:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "08:00", "closes": "17:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "17:00" }
-  ],
   "areaServed": [{ "@type": "AdministrativeArea", "name": "United States" }],
   "knowsAbout": ["Video editing", "Post-production", "YouTube editing", "Product video", "Promo video", "Videography packages"]
 }
@@ -102,6 +100,7 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
   </script>
 </head>
 <body>
+  <ClosureBanner />
   <slot />
 
   <!-- Swiper (self-hosted, non-blocking) -->
@@ -117,39 +116,6 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
   <!-- Site interactions -->
   <script>
     import '../scripts/main.js';
-  </script>
-
-  <!-- Cal.com facade: lightweight button, real embed (book.kpicreatives.com) loads only on click -->
-  <button id="cal-fab" type="button" aria-label="Schedule a Call">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 16H5V10h14v10ZM5 8V6h14v2H5Z" fill="currentColor"/></svg>
-    Schedule a Call
-  </button>
-  <style is:inline>
-    #cal-fab {
-      position: fixed; right: 20px; bottom: 20px; z-index: 10001;
-      display: inline-flex; align-items: center; gap: 8px;
-      background: #7b5be9; color: #fff; border: 0; cursor: pointer;
-      border-radius: 9999px; padding: 14px 22px;
-      font-family: inherit; font-size: 16px; font-weight: 700; line-height: 1;
-      box-shadow: 0 4px 14px rgba(0,0,0,.25);
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    #cal-fab:hover { transform: scale(1.04); box-shadow: 0 6px 18px rgba(0,0,0,.3); }
-  </style>
-  <script is:inline>
-    (function () {
-      var btn = document.getElementById('cal-fab');
-      var inited = false;
-      btn.addEventListener('click', function () {
-        if (!inited) {
-          inited = true;
-          (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://book.kpicreatives.com/embed/embed.js", "init");
-          Cal("init", { origin: "https://book.kpicreatives.com" });
-          Cal("ui", { styles: { branding: { brandColor: "#7b5be9" } }, hideEventTypeDetails: false });
-        }
-        Cal("modal", { calLink: "dima/qualification-15" });
-      });
-    })();
   </script>
 
   <!-- Basic consent mode: GA4 is not requested until analytics consent is granted. -->
@@ -176,10 +142,6 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
 
         window.gtag('js', new Date());
         window.gtag('config', measurementId);
-
-        if (location.href.indexOf('calendly') !== -1) {
-          window.gtag('event', 'Page calendly');
-        }
       }
 
       window.addEventListener('indiev:consent-update', function (event) {
@@ -188,22 +150,6 @@ const { title, description, canonical = 'https://www.indiev.org', noindex = fals
         if (analyticsGranted) loadAnalytics();
       });
 
-      // --- GA4 events, migrated 1:1 from the GTM container ---
-      // price_card_button: click on a .price_card_button element
-      // book_scroll: click on the "Schedule a Call" button (was .calendly-badge-content)
-      document.addEventListener('click', function (e) {
-        if (!analyticsGranted || !analyticsLoaded) return;
-        var el = e.target && e.target.closest ? e.target : null;
-        if (!el) return;
-        if (el.closest('.price_card_button')) window.gtag('event', 'price_card_button');
-        if (el.closest('#cal-fab, .calendly-badge-content')) window.gtag('event', 'book_scroll');
-      }, true);
-      // "Form submit": any form; "Subscribe_form": the #email-form newsletter form
-      document.addEventListener('submit', function (e) {
-        if (!analyticsGranted || !analyticsLoaded) return;
-        window.gtag('event', 'Form submit');
-        if (e.target && e.target.id === 'email-form') window.gtag('event', 'Subscribe_form');
-      }, true);
     })();
   </script>
 </body>

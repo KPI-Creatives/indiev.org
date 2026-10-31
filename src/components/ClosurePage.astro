@@ -1,0 +1,27 @@
+---
+// Full-page closure notice for former lead-capture URLs (signup, booking, contact, affiliate, thank-you).
+import Base from '../layouts/Base.astro';
+import Navbar from './Navbar.astro';
+import Footer from './Footer.astro';
+import ClosureNotice from './ClosureNotice.astro';
+interface Props { title: string; canonical: string; }
+const { title, canonical } = Astro.props;
+---
+<Base
+  title={title}
+  description="INDIEV has ceased operations and is no longer accepting new projects. The articles on this site remain available as a public resource."
+  canonical={canonical}
+  noindex={true}
+>
+  <Navbar />
+  <main class="main">
+    <ClosureNotice as="h1">
+      <p class="closure-notice__links"><a href="/blog">Read the blog</a> · <a href="/services">Browse the service guides</a> · <a href="/">Home</a></p>
+    </ClosureNotice>
+  </main>
+  <Footer />
+</Base>
+<style is:global>
+  .closure-notice__links { margin: var(--space-3) 0 0; font-family: var(--font-body); font-size: var(--text-base); }
+  .closure-notice__links a { color: var(--color-primary); text-decoration: underline; }
+</style>

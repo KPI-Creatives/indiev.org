@@ -2,47 +2,38 @@
 import Base from '../../layouts/Base.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
+import ClosureNotice from '../../components/ClosureNotice.astro';
 const extraHead = `<script type="application/ld+json">{
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": "Freelance video editing services",
-        "image": ["https://cdn.prod.website-files.com/6641b310b3de86bb277e025d/66699d773c5dfafb1e02e8be_expert_hero.webp"],
-        "description": "We provide freelance video editing services and transform your ideas into compelling video content. Our team of skilled editors and motion graphics experts is dedicated to delivering high-quality videos that resonate with your audience and elevate your brand.",
-        "brand": {
-            "@type": "Brand",
-            "name": "Indiev.org"
-        },
-        "review": {
-            "@type": "Review",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "80",
-                "bestRating": "100",
-                "worstRating": "0"
-            },
-            "author": {
-                "@type": "Person",
-                "name": "John"
-            }
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.7",
-            "reviewCount": "60"
-        },
-        "offers": {
-            "@type": "Offer",
-            "url": "https://www.indiev.org/sp/freelance-video-editing-services",
-            "priceCurrency": "USD",
-            "price": "250",
-            "itemCondition": "https://schema.org/UsedCondition",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-                "@type": "Organization",
-                "name": "Indiev.org"
-            }
-        }
-    }</script>`;
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Freelance video editing services",
+  "image": [
+    "https://cdn.prod.website-files.com/6641b310b3de86bb277e025d/66699d773c5dfafb1e02e8be_expert_hero.webp"
+  ],
+  "description": "We provide freelance video editing services and transform your ideas into compelling video content. Our team of skilled editors and motion graphics experts is dedicated to delivering high-quality videos that resonate with your audience and elevate your brand.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Indiev.org"
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "80",
+      "bestRating": "100",
+      "worstRating": "0"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "John"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "60"
+  }
+}</script>`;
 ---
 <Base
   title={'Freelance video editing services | Indiev'}
@@ -57,7 +48,6 @@ const extraHead = `<script type="application/ld+json">{
 <div class="main_container">
 <p class="expert_hero_text">Your Story, Our Craft</p>
 <h1 class="experts_title">Freelance Video Editing Services</h1>
-<a class="video_button_price video_button_demo request_demo_g4 seo_button" href="/calendly" title="free video editing service">Request a demo</a>
 </div>
 <div class="expert_hero_image_container"><img alt="Freelance Video Editing Services" class="seo_image" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, (max-width: 1279px) 47vw, (max-width: 1439px) 50vw, 720px" src="/images/freelance-video-editing-services_1.webp" srcset="/images/freelance-video-editing-services_1freelance-video-editing-services.webp 500w, /images/freelance-video-editing-services_1freelance-video-editing-services.webp 800w, /images/freelance-video-editing-services_1freelance-video-editing-services.webp 1080w, /images/freelance-video-editing-services_1freelance-video-editing-services.webp 1600w, /images/freelance-video-editing-services_1freelance-video-editing-services.webp 2000w, /images/freelance-video-editing-services_1freelance-video-editing-services.webp 2600w, /images/freelance-video-editing-services_1freelance-video-editing-services.webp 3200w, /images/freelance-video-editing-services_1.webp 4240w" title="Freelance Video Editing Services"/></div>
 </section>
@@ -74,650 +64,17 @@ const extraHead = `<script type="application/ld+json">{
 <div class="welcome_text_container">
 <h2 class="welcome_subtitle"> Welcome to INDIEV,</h2>
 <p class="paragraph-4">where we provide <strong>freelance video editing services </strong>and transform your ideas into compelling video content. Our team of skilled editors and motion graphics experts is dedicated to delivering high-quality videos that resonate with your audience and elevate your brand.</p>
-<a class="button-4 w-button" data-w-id="e03009d3-a86b-7127-2af6-31f901ea1471" href="/contacts">Get in Touch</a>
 </div>
 </div>
 </div>
 </section>
-<section class="price_plan" id="pricing">
-<div class="main_container">
-<h2 class="empowering_subtitle"><span class="empowering_subtitle_span"> Choose the Plan </span><br/>that Fits Your Needs</h2>
-<div class="button-switch">
-<a class="button-month w-button" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87bc2" href="#">Subscription Plans</a>
-<a class="button-year w-button" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87bc4" href="#">Flat Rates</a>
-<div class="toggle-botton"></div>
-</div>
-<div class="slide-container swiper">
-<div class="slide-content clone-month">
-<div class="card-wrapper swiper-wrapper">
-<div class="card swiper-slide" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87bca">
-<div class="pad-container">
-<div class="flex-div">
-<div class="price">$100 <span class="price-span">/ 1 video</span></div>
-<div class="icon-container">
-<div class="video-number">single project</div>
-<div class="icon-wrapper">
-<div class="w-embed"><svg class="camera-icon" fill="none" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_3596_10250)">
-<path class="camera-icon" d="M22.6667 14V9.33333C22.6667 8.6 22.0667 8 21.3333 8H5.33333C4.6 8 4 8.6 4 9.33333V22.6667C4 23.4 4.6 24 5.33333 24H21.3333C22.0667 24 22.6667 23.4 22.6667 22.6667V18L28 23.3333V8.66667L22.6667 14Z" fill="black" fill-opacity="0.8"></path>
-</g>
-<defs>
-<clippath id="clip0_3596_10250">
-<rect fill="white" height="32" width="32"></rect>
-</clippath>
-</defs>
-</svg></div>
-</div>
-</div>
-<ul class="price-list w-list-unstyled" role="list">
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Designed for Single Projects:<br/></span>Ideal for clients needing professional editing for just one video.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Pricing:<br/></span>Based on the complexity and length of the video. For example, starting at $250 for a video up to 5 minutes.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Features:<br/> </span>Includes professional editing, color correction, basic motion graphics, captions, and subtitles.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Turnaround Time:<br/> </span>Depending on the project’s complexity, estimated turnaround time will be communicated upfront.</div>
-</li>
-</ul>
-</div>
-<a class="price_card_button track_button open_modal w-button" data-name="one_time_plan" data-price="250" href="#" target="_blank" title="video editing services hire">One-Time Video Editing Plan</a>
-</div>
-</div>
-<div class="card swiper-slide">
-<div class="pad-container">
-<div class="flex-div">
-<div class="price">$800 <span class="price-span">/ month</span></div>
-<div class="icon-container">
-<div class="video-number">up to 7 videos</div>
-<div class="icon-wrapper">
-<div class="code-embed-2 w-embed"><svg class="camera-icon" fill="none" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_3596_10250)">
-<path class="camera-icon" d="M22.6667 14V9.33333C22.6667 8.6 22.0667 8 21.3333 8H5.33333C4.6 8 4 8.6 4 9.33333V22.6667C4 23.4 4.6 24 5.33333 24H21.3333C22.0667 24 22.6667 23.4 22.6667 22.6667V18L28 23.3333V8.66667L22.6667 14Z" fill="black" fill-opacity="0.8"></path>
-</g>
-<defs>
-<clippath id="clip0_3596_10250">
-<rect fill="white" height="32" width="32"></rect>
-</clippath>
-</defs>
-</svg></div>
-</div>
-</div>
-<ul class="price-list w-list-unstyled" role="list">
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Professional Video Editing: <br/>‍</span>Access to one sharable video editor.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span"> Included Features: <br/>‍</span>Professional video editing, video and audio stock, basic motion graphics, captions, and subtitles.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Turnaround Time: <br/>‍</span>2-3 business days.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Support:<br/>‍</span>Email and chat support.</div>
-</li>
-</ul>
-</div>
-<a class="price_card_button track_button open_modal w-button" data-name="basic_plan_month" data-price="800" href="#" target="_blank" title="video editing services hire">Basic Plan</a>
-</div>
-</div>
-<div class="card swiper-slide" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87c2e">
-<div class="pad-container">
-<div class="flex-div">
-<div class="price">$1800 <span class="price-span">/ month</span></div>
-<div class="icon-container">
-<div class="video-number">up to 18 videos</div>
-<div class="icon-wrapper">
-<div class="w-embed"><svg class="camera-icon" fill="none" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_3596_10250)">
-<path class="camera-icon" d="M22.6667 14V9.33333C22.6667 8.6 22.0667 8 21.3333 8H5.33333C4.6 8 4 8.6 4 9.33333V22.6667C4 23.4 4.6 24 5.33333 24H21.3333C22.0667 24 22.6667 23.4 22.6667 22.6667V18L28 23.3333V8.66667L22.6667 14Z" fill="black" fill-opacity="0.8"></path>
-</g>
-<defs>
-<clippath id="clip0_3596_10250">
-<rect fill="white" height="32" width="32"></rect>
-</clippath>
-</defs>
-</svg></div>
-</div>
-</div>
-<ul class="price-list w-list-unstyled" role="list">
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Dedicated Professional Editing:<br/></span>One dedicated video editor for more personalized and complex projects.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Advanced Features: <br/>‍</span>Professional editing with color correction, advanced motion graphics, and more..</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Additional Services: <br/>‍</span>Video and audio stock, captions, subtitles, and color grading.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Faster Turnaround:<br/> </span>1-2 business days.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Priority Support:<br/></span>Enhanced email and chat support.</div>
-</li>
-</ul>
-</div>
-<a class="price_card_button track_button open_modal w-button" data-name="pro_plan_month" data-price="1800" href="#" target="_blank" title="video editing services hire">Pro Plan</a>
-</div>
-</div>
-<div class="card swiper-slide" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87c68">
-<div class="pad-container">
-<div class="flex-div">
-<div class="price">$3000 <span class="price-span">/ month</span></div>
-<div class="icon-container">
-<div class="video-number">up to 36 videos</div>
-<div class="icon-wrapper">
-<div class="w-embed"><svg class="camera-icon" fill="none" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_3596_10250)">
-<path class="camera-icon" d="M22.6667 14V9.33333C22.6667 8.6 22.0667 8 21.3333 8H5.33333C4.6 8 4 8.6 4 9.33333V22.6667C4 23.4 4.6 24 5.33333 24H21.3333C22.0667 24 22.6667 23.4 22.6667 22.6667V18L28 23.3333V8.66667L22.6667 14Z" fill="black" fill-opacity="0.8"></path>
-</g>
-<defs>
-<clippath id="clip0_3596_10250">
-<rect fill="white" height="32" width="32"></rect>
-</clippath>
-</defs>
-</svg></div>
-</div>
-</div>
-<ul class="price-list w-list-unstyled" role="list">
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Premium Editing Services:<br/></span>Two dedicated video editors for high-volume, complex editing tasks.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Elite Features:<br/></span>Advanced professional editing, comprehensive motion graphics (including 2D/3D), special effects, and advanced color grading.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Comprehensive Services:<br/> </span>Video and audio stock, captions, subtitles, and advanced motion graphics.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Top Priority Turnaround:<br/></span>Same-day or next-day service.</div>
-</li>
-<li class="price-item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="price-item-text-span">Exclusive Support:<br/> </span>Dedicated account manager and priority support channels.</div>
-</li>
-</ul>
-</div>
-<a class="price_card_button track_button open_modal w-button" data-name="ultimate_plan_month" data-price="3000" href="#" target="_blank" title="video editing services hire">Ultimate Plan</a>
-</div>
-</div>
-</div>
-</div>
-<div class="slide-content clone-year">
-<div class="card-wrapper swiper-wrapper">
-<div class="card swiper-slide second_card" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87ca3">
-<div class="pad-container">
-<div class="flex-div">
-<div class="price second_price_title">Video <br/>Editing Services</div>
-<ul class="price-list w-list-unstyled" role="list">
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Basic Video Edit<br/></span><span class="second_price_text_desc">(Up to 5 min)</span><span class="small_text_price"><br/>Includes cuts, transitions, basic color correction, and sound balancing.</span></div>
-</div>
-<div class="second_price">$150</div>
-</li>
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Advanced Video Edit<br/></span><span class="second_price_text_desc">(5-15 min)</span><span class="second_price_text"><br/>‍</span><span class="small_text_price">Detailed cuts, transitions, color grading, sound design, and minor motion graphics.</span></div>
-</div>
-<div class="second_price">$300</div>
-</li>
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Full-Length Edit<br/></span><span class="second_price_text_desc">(15-30 min)</span><span class="small_text_price"><br/>Complete editing with color grading, sound design, and enhanced visual elements.</span></div>
-</div>
-<div class="second_price">$500</div>
-</li>
-</ul>
-</div>
-<a class="price_card_button track_button open_modal w-button" data-name="pro_plan_year" data-price="19800" href="#" title="video editing services hire">Talk to Us</a>
-</div>
-</div>
-<div class="card swiper-slide second_card" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87cdc">
-<div class="pad-container">
-<div class="flex-div">
-<div class="price second_price_title">Social <br/>Media Edits</div>
-<ul class="price-list w-list-unstyled" role="list">
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Instagram Reels<br/></span><span class="second_price_text_desc">(Up to 30 sec)</span><span class="small_text_price"><br/>Includes cuts, transitions, basic color correction, and sound balancing.</span></div>
-</div>
-<div class="second_price">$100</div>
-</li>
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Shorts/Vertical Video<br/></span><span class="second_price_text_desc">(Up to 30 sec)</span><span class="second_price_text"><br/>‍</span><span class="small_text_price">Edited for platforms like TikTok, Instagram, or YouTube Shorts, with captions and music.</span></div>
-</div>
-<div class="second_price">$100</div>
-</li>
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Instagram Reels Pack<br/>‍</span><span class="second_price_text_desc">(5 Reels, 30 sec each)</span><span class="small_text_price"><br/>A batch of five Reels optimized for Instagram engagement.</span></div>
-</div>
-<div class="second_price">$400</div>
-</li>
-</ul>
-</div>
-<a class="price_card_button track_button open_modal w-button" data-name="pro_plan_year" data-price="19800" href="#" title="video editing services hire">Talk to Us</a>
-</div>
-</div>
-<div class="card swiper-slide second_card" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87d16">
-<div class="pad-container">
-<div class="flex-div">
-<div class="price second_price_title">YouTube Video <br/>Packages</div>
-<ul class="price-list second_price w-list-unstyled" role="list">
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">YouTube Standard Edit<br/>‍</span><span class="second_price_text_desc">(Up to 10 min)</span><span class="small_text_price"><br/>Basic editing with cuts, transitions, and minor color grading.</span></div>
-</div>
-<div class="second_price">$200</div>
-</li>
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">YouTube Enhanced Edit<br/></span><span class="second_price_text_desc">(10-20 min)</span><span class="second_price_text"><br/>‍</span><span class="small_text_price">Full video edit with color grading, sound design, captions, and minor graphics.</span></div>
-</div>
-<div class="second_price">$250</div>
-</li>
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">YouTube Content Package<br/></span><span class="second_price_text_desc">(4 Videos, 10 min each)</span><span class="small_text_price"><br/>Monthly package with consistent branding, graphics, and optimizations for weekly uploads.</span></div>
-</div>
-<div class="second_price">$1000</div>
-</li>
-</ul>
-</div>
-<a class="price_card_button track_button open_modal w-button" data-name="pro_plan_year" data-price="19800" href="#" title="video editing services hire">Talk to Us</a>
-</div>
-</div>
-<div class="card swiper-slide second_card" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87d50">
-<div class="pad-container">
-<div class="flex-div">
-<div class="price second_price_title">Motion <br/>Graphics</div>
-<ul class="price-list w-list-unstyled" role="list">
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Basic Motion Graphics<br/></span><span class="second_price_text_desc">(Up to 30 sec)</span><span class="small_text_price"><br/>Simple animations, logo intros, and lower-thirds.</span></div>
-</div>
-<div class="second_price">$200</div>
-</li>
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Advanced Motion Graphics<br/>‍</span><span class="second_price_text_desc">(30-60 sec)</span><span class="small_text_price"><br/>More detailed animations and transitions, ideal for intros or ads.</span></div>
-</div>
-<div class="second_price">$500</div>
-</li>
-</ul>
-</div>
-<a class="price_card_button track_button open_modal w-button" data-name="pro_plan_year" data-price="19800" href="#" title="video editing services hire">Talk to Us</a>
-</div>
-</div>
-<div class="card swiper-slide second_card" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87d79">
-<div class="pad-container">
-<div class="flex-div">
-<div class="price second_price_title">Thumbnail <br/>Design</div>
-<ul class="price-list w-list-unstyled" role="list">
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Single Thumbnail Design</span><span class="small_text_price"><br/>Eye-catching, optimized thumbnail design for engagement.</span></div>
-</div>
-<div class="second_price">$30</div>
-</li>
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Thumbnail Pack<br/>‍</span><span class="second_price_text_desc">(5 Thumbnails)</span><span class="small_text_price"><br/>Branded thumbnails for a content series.</span></div>
-</div>
-<div class="second_price">$100<br/></div>
-</li>
-</ul>
-</div>
-<a class="price_card_button track_button open_modal w-button" data-name="pro_plan_year" data-price="19800" href="https://hub.kpi-creatives.com/order/0N3O2M" target="_blank" title="video editing services hire">Talk to Us</a>
-</div>
-</div>
-<div class="card swiper-slide second_card" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87da0">
-<div class="pad-container">
-<div class="flex-div">
-<div class="price second_price_title">Consulting &amp;<br/> Strategy</div>
-<ul class="price-list w-list-unstyled" role="list">
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Content Strategy Session<br/>‍</span><span class="second_price_text_desc">(1 hour)</span><span class="small_text_price"><br/>A focused session to plan content for engagement and platform growth.</span></div>
-</div>
-<div class="second_price">$200</div>
-</li>
-<li class="price-item second_price">
-<div class="second_price_item">
-<div class="done-icon-container">
-<div class="code-embed w-embed"><svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0h24v24H0z" fill="none"></path>
-<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
-</svg></div>
-</div>
-<div class="price-item-text"><span class="second_price_text">Monthly Content Strategy Retainer</span><span class="small_text_price"><br/>Ongoing consulting to refine content strategy, optimize uploads, and track performance.</span></div>
-</div>
-<div class="second_price">$800</div>
-</li>
-</ul>
-</div>
-<a class="price_card_button track_button open_modal w-button" data-name="pro_plan_year" data-price="19800" href="#" title="video editing services hire">Talk to Us</a>
-</div>
-</div>
-</div>
-</div>
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>
-</div>
-<div class="code-embed-5 w-embed w-script">
 
-<style>
-.slide-content {
-  margin: 0 60px;
-  overflow:hidden !important;
-  padding-top:20px;
-   padding-bottom:20px;
-}
-.slide-container {
-overflow: visible !important;
-}
-.swiper-button-next{
-color:#DDD}
-.swiper-button-prev{
-color:#DDD}
-.card:hover .price-item-text {
-  color: rgba(255, 255, 255, 0.8);
-}
-.card:hover .price {
-  color: rgba(255, 255, 255, 0.8);
-}
-.card:hover .price-span {
-  color: rgba(255, 255, 255, 0.8);
-}
-.card:hover .price-item-text-span {
- color: rgba(255, 255, 255, 0.8);
-}
-.card:hover .video-number {
-  color: rgba(255, 255, 255, 0.8);
-}
-.card:hover .camera-icon {
-  fill: rgba(255, 255, 255, 0.8);
-}
-.price_card_button{
-transition: color 300ms ease, background 300ms ease }
-.card:hover .price_card_button{
-color:#5243C2;
-background: #F496D1;
-}
-@media screen and (max-width: 400px) {
-  .card {
-    height: 780px !important;
-  }
-}
-@media screen and (max-width: 900px) {
-  .slide-content {
-    margin: 0 ;
-  }
-}
-@media screen and (max-width: 900px) {
-.swiper-button-next{right: -15px}
-  .swiper-button-prev{left: -15px}
-}
-</style>
-
-</div>
-</div>
-<div class="modal_wrapper">
-<div class="modal">
-<div class="price_form w-form" id="price-form">
-<div class="modal_close_button" data-w-id="0b4186b2-6e16-df3f-f3bc-212af2d87dcc"><img alt="" loading="lazy" src="/images/Vectors-Wrapper.svg"/></div>
-<form data-name="Sales Pitch Form" data-wf-element-id="0b4186b2-6e16-df3f-f3bc-212af2d87dce" data-wf-page-id="66a89a34569a353634842ba8" method="get" name="wf-form-Sales-Pitch-Form">
-<p class="modal_form_title">Contact Us !</p>
-<div class="form_field-wrapper"><label class="form_field-label" for="price-name-2">Name*</label><input class="form_input w-input" data-name="Name 2" id="price-name" maxlength="256" name="Name-2" placeholder="Name" required="" type="text"/>
-<div class="error_message" id="name-error"></div>
-<div class="check_mark" id="name-check"><img alt="check mark" class="check_image" loading="lazy" sizes="100vw" src="/images/checkmark-transparent-6-removebg-preview.png" srcset="/images/checkmark-transparent-6-removebg-preview-p-500.png 500w, /images/checkmark-transparent-6-removebg-preview.png 657w"/></div>
-</div>
-<div class="form_field-wrapper"><label class="form_field-label" for="price-email-2">Email*</label><input class="form_input w-input" data-name="Name 2" id="price-email" maxlength="256" name="Name-2" placeholder="Email" required="" type="text"/>
-<div class="error_message" id="email-error"></div>
-<div class="check_mark" id="email-check"><img alt="check mark" class="check_image" loading="lazy" sizes="100vw" src="/images/checkmark-transparent-6-removebg-preview.png" srcset="/images/checkmark-transparent-6-removebg-preview-p-500.png 500w, /images/checkmark-transparent-6-removebg-preview.png 657w"/></div>
-</div>
-<div class="form_field-wrapper"><label class="form_field-label" for="price-phone-2">Phone*</label><input class="form_input w-input" data-name="Name 2" id="price-phone" maxlength="256" name="Name-2" placeholder="+1" required="" type="text"/>
-<div class="error_message" id="phone-error"></div>
-<div class="check_mark" id="phone-check"><img alt="check mark" class="check_image" loading="lazy" sizes="100vw" src="/images/checkmark-transparent-6-removebg-preview.png" srcset="/images/checkmark-transparent-6-removebg-preview-p-500.png 500w, /images/checkmark-transparent-6-removebg-preview.png 657w"/></div>
-</div>
-<div class="form_field-wrapper"><label class="field-label-5" for="price-message-2">Message</label><textarea class="form_input is-text-area w-input" data-name="Message 2" id="price-message" maxlength="5000" name="Message-2" placeholder="Type your message..."></textarea></div><input class="button_form saledesk_button_form w-button" data-wait="Please wait..." id="price-submmit-button" type="submit" value="Submit"/>
-</form>
-<div class="w-form-done">
-<div>Thank you! Your submission has been received!</div>
-</div>
-<div class="w-form-fail">
-<div>Oops! Something went wrong while submitting the form.</div>
-</div>
-</div>
-</div>
-<div class="moda_backdrop"></div>
-<div class="w-embed w-script">
-<style>
-.no-scroll {
-  overflow: hidden;
-}
-.disable {
-  background-color: #ccc; 
-  color: #fff; 
-  cursor: not-allowed; 
-  opacity: 0.6;
-  pointer-events: none;
-}
-</style>
-
-</div>
-</div>
-</section>
-<section class="specific_section"><img alt="background image" class="specific_back_image" height="Auto" loading="lazy" sizes="(max-width: 1439px) 100vw, 1440px" src="/images/webflow-bg.webp" srcset="/images/webflow-bg-p-500.webp 500w, /images/webflow-bg-p-800.webp 800w, /images/webflow-bg-p-1080.webp 1080w, /images/webflow-bg-p-1600.webp 1600w, /images/webflow-bg-p-2000.webp 2000w, /images/webflow-bg-p-2600.webp 2600w, /images/webflow-bg.webp 2880w" width="Auto"/><img alt="background image " class="small_back_image" loading="lazy" sizes="100vw" src="/images/needs-mob.webp" srcset="/images/needs-mob-p-500.webp 500w, /images/needs-mob.webp 750w"/>
-<div class="main_container">
-<h2 class="specific-title"><span class="specific-subtitle-span">Unsure about which plan</span> <span class="specific-subtitle-span">is right for you?</span></h2>
-<h2 class="specific-title"><span class="specific-subtitle-span">Have specific videoediting needs?</span></h2>
-<p class="specific-text"> Let's talk about it!</p>
-<a class="call gtm_class w-button" data-w-id="e03009d3-a86b-7127-2af6-31f901ea1645" href="/calendly" title="corporate video editing services"> Schedule free 30-Min Call</a>
-</div>
-</section>
+<ClosureNotice />
 <section class="service_section">
 <div class="main_container">
 <div class="service_heading-block">
 <h2 class="empowering_subtitle how_work_subtitle"><span class="empowering_subtitle_span"> Video Editing Services </span><br/>We Offer</h2>
-<p class="text-block-2 ta-center"> Choose a service or combine several. All are available inside our unlimited video editing services model.</p>
+<p class="text-block-2 ta-center"> Guides to each video editing service INDIEV offered.</p>
 </div>
 <div class="w-layout-grid links_grid">
 <div class="price-item jc-left">
@@ -1054,7 +411,6 @@ background: #F496D1;
 </div>
 </div>
 </div>
-<a class="offer_button w-button" href="/signup-pricing">Start My Video Project</a>
 </div>
 </div>
 </section>
@@ -1380,41 +736,8 @@ background: #F496D1;
 </div>
 </div>
 </section>
-<section class="instruction">
-<div class="main_container">
-<ul class="instruction_list w-list-unstyled" role="list">
-<li class="how_work_item instruction_item">
-<div class="item_number">1</div>
-<h3 class="item_subtitle">Schedule a Call</h3>
-<p class="item_text">Book a call with us to discuss your video project and specific needs</p>
-</li>
-<li class="how_work_item instruction_item">
-<div class="item_number">2</div>
-<h3 class="item_subtitle">Discuss Your Vision</h3>
-<p class="item_text">Share your goals and creative ideas with our team.</p>
-</li>
-<li class="how_work_item instruction_item">
-<div class="item_number">3</div>
-<h3 class="item_subtitle">Receive Your First Edit</h3>
-<p class="item_text">Get your initial video edit quickly and efficiently.</p>
-</li>
-<li class="how_work_item instruction_item">
-<div class="item_number">4</div>
-<h3 class="item_subtitle">Unlimited Revisions</h3>
-<p class="item_text">We’ll revise your video until it’s exactly how you want it.</p>
-</li>
-</ul>
-</div>
-</section>
-<section class="elevate about_join instruction_join_section">
-<div class="main_container">
-<h2 class="examples_title evaluate_title instruction_title"> Ready to Elevate <br/>Your Video Content?</h2>
-<p class="evaluate_text">Schedule a Call Today and Let's Get Started!</p>
-<div class="buton_container">
-<a class="call portfolio_boton gtm_class w-button" data-w-id="e03009d3-a86b-7127-2af6-31f901ea16e8" href="/calendly">Schedule free 30-Min Call</a>
-</div>
-</div>
-</section>
+
+
 <section class="information">
 <div class="main_container">
 <div class="seo_text_container">
@@ -1572,125 +895,10 @@ background: #F496D1;
 </ul>
 </li>
 </ol>
-<h3 class="information_subtitle"><strong>Steps to Get Started with Unlimited Video Editing Service</strong></h3>
-<ol class="information_list deep_list" role="list">
-<li class="information_item">
-<h4 class="information_list_title"><strong>Schedule a</strong>
-<a href="/calendly">free consultation</a><strong>:</strong>
-</h4>
-<ul class="information_second_list deep_second_list" role="list">
-<li class="information_second_item deep_second_item">
-<p class="information_item_text">Discuss your project requirements</p>
-</li>
-<li class="information_second_item deep_second_item">
-<p class="information_item_text">Share your vision and goals </p>
-</li>
-</ul>
-</li>
-<li class="information_item">
-<h4 class="information_list_title"><strong>Submit Your Footage:</strong></h4>
-<ul class="information_second_list" role="list">
-<li class="information_second_item deep_second_item">
-<p class="information_item_text"> Upload your raw video files</p>
-</li>
-<li class="information_second_item deep_second_item">
-<p class="information_item_text">Provide any additional assets (music, logos, etc.)</p>
-</li>
-</ul>
-</li>
-<li class="information_item">
-<h4 class="information_list_title"><strong>Receive a Quote:</strong></h4>
-<ul class="information_second_list" role="list">
-<li class="information_second_item deep_second_item">
-<p class="information_item_text"> Get a detailed estimate based on your project’s complexity</p>
-</li>
-</ul>
-</li>
-<li class="information_item">
-<h4 class="information_list_title"><strong>Review and Approve the Edit:</strong></h4>
-<ul class="information_second_list" role="list">
-<li class="information_second_item deep_second_item">
-<p class="information_item_text"> View drafts and suggest changes</p>
-</li>
-<li class="information_second_item deep_second_item">
-<p class="information_item_text">Finalize the video after revisions</p>
-</li>
-</ul>
-</li>
-<li class="information_item">
-<h4 class="information_list_title"><strong>Download Your Final Video:</strong></h4>
-<ul class="information_second_list" role="list">
-<li class="information_second_item deep_second_item">
-<p class="information_item_text">Receive the completed project in your desired format</p>
-</li>
-</ul>
-</li>
-</ol>
-<h3 class="information_subtitle"><strong>Monthly Video Editing Service Pricing</strong></h3>
-<p class="information_item_text">The cost of video editing services can vary widely based on the scope and complexity of the project. Here’s a general idea of what you can expect:</p>
-<div class="w-embed">
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  th, td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
-  }
-  th {
-    background-color: #f4f4f4;
-  }
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  a {
-    color: #1a0dab;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
-<table>
-<thead>
-<tr>
-<th>Service Type</th>
-<th>Estimated Cost Range</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1 video</td>
-<td>$250</td>
-</tr>
-<tr>
-<td>Basic plan</td>
-<td>$800</td>
-</tr>
-<tr>
-<td>Pro plan</td>
-<td>$1800</td>
-</tr>
-<tr>
-<td>Ultimate plan</td>
-<td>$3000</td>
-</tr>
-<tr>
-<td>Enterprise</td>
-<td>
-<a href="/contacts">Contact for details</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 <h3 class="information_subtitle"><strong>Tips for Choosing the Vacation Video Editing Service</strong></h3>
 <ol class="information_list deep_list" role="list">
 <li class="information_item">
-<h4 class="information_list_title"><strong>Check our </strong>
+<h4 class="information_list_title"><strong>Check the </strong>
 <a href="/portfolio"><strong>Portfolio</strong></a>
 </h4>
 <ul class="information_second_list deep_second_list" role="list">
@@ -1725,17 +933,19 @@ background: #F496D1;
 </li>
 </ul>
 </li>
-<li class="information_item">
-<h4 class="information_list_title"><strong>Compare Pricing:</strong></h4>
-<ul class="information_second_list" role="list">
-<li class="information_second_item deep_second_item">
-<p class="information_item_text">Get quotes from multiple plans to find the best value.</p>
-</li>
 </ul>
 </li>
 </ol>
 <h3 class="information_subtitle"><strong>Frequently Asked Questions</strong></h3>
 <ol class="seo_question_list" role="list">
+<li class="seo_question_item">
+<div class="seo_question_container">
+<h4 class="seo_question_title">Is INDIEV still operating?</h4>
+<div class="seo_accept_question">
+<div class="seo_text_div">No. INDIEV has ceased operations and is no longer accepting new projects. This guide remains available as a public resource.</div>
+</div>
+</div>
+</li>
 <li class="seo_question_item">
 <div class="seo_question_container" itemprop="acceptedAnswer" itemscope="acceptedAnswer" itemtype="https://schema.org/Answer">
 <h4 class="seo_question_title">How long does it take to edit a video?</h4>
@@ -1764,7 +974,7 @@ background: #F496D1;
 <div class="seo_question_container" itemprop="acceptedAnswer" itemscope="acceptedAnswer" itemtype="https://schema.org/Answer">
 <h4 class="seo_question_title"><strong>Can I request revisions after the first draft?</strong></h4>
 <div class="seo_accept_question" itemprop="acceptedAnswer" itemscope="acceptedAnswer" itemtype="https://schema.org/Answer">
-<div class="seo_text_div" itemprop="text">Yes, most services offer a set number of revisions within the quoted price.<br/></div>
+<div class="seo_text_div" itemprop="text">Yes, most services offer a set number of revisions as part of the project.<br/></div>
 </div>
 </div>
 </li>

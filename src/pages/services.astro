@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Navbar from '../components/Navbar.astro';
-import AnyCta from '../components/AnyCta.astro';
+import ClosureNotice from '../components/ClosureNotice.astro';
 import Footer from '../components/Footer.astro';
 
 const services = [
@@ -44,7 +44,7 @@ const services = [
 ---
 <Base
   title="All Video Editing Services — Full Catalog | Indiev"
-  description="Every video editing service Indiev offers: YouTube, wedding, real estate, corporate, social media, 4K, white label and more. Flat plans from $24/day, 24–48h turnaround."
+  description="Every video editing service Indiev offered: YouTube, wedding, real estate, corporate, social media, 4K, white label and more. Kept as a public reference."
   canonical="https://www.indiev.org/services"
 >
   <Navbar />
@@ -53,7 +53,7 @@ const services = [
       <div class="main_container">
         <div class="service_heading-block">
           <h1 class="empowering_subtitle how_work_subtitle"><span class="empowering_subtitle_span">All Video Editing Services</span><br/>We Offer</h1>
-          <p class="text-block-2 ta-center">Every service below is available as a one-off project or inside our unlimited video editing plans — flat pricing from $24/day, unlimited revisions, 24–48 hour turnaround.</p>
+          <p class="text-block-2 ta-center">INDIEV has ceased operations. The guides below describe the video editing services INDIEV offered and remain available as a public reference.</p>
         </div>
         <div class="w-layout-grid links_grid">
           {services.map((s) => (
@@ -70,7 +70,7 @@ const services = [
         </div>
       </div>
     </section>
-    <AnyCta />
+    <ClosureNotice />
   </div>
   <Footer />
 </Base>
